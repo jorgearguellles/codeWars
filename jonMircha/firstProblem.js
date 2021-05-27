@@ -31,19 +31,29 @@ function countCharacters(dataTest) {
 	};
 
 	if (typeof dataTest === "string") {
-		console.log("Dato de prueba: ", dataTest, "Longitud: ", dataTest.length);
+		console.log(
+			"Dato de prueba:",
+			dataTest,
+			"Número de caracteres:",
+			dataTest.length
+		);
 	} else if (typeof dataTest === "number") {
 		console.log(
-			"Dato de prueba: ",
+			"Dato de prueba:",
 			dataTest,
-			"Longitud: ",
+			"Número de caracteres:",
 			dataTest.toString().length
 		);
 	} else if (typeof dataTest === "object") {
 		let size = Object.size(dataTest);
-		console.log("Dato de prueba: ", dataTest, "Longitud: ", size);
+		console.log("Dato de prueba: ", dataTest, "Número de caracteres:", size);
 	} else {
-		console.log("Dato de prueba: ", dataTest, "Longitud: ", dataTest.length);
+		console.log(
+			"Dato de prueba: ",
+			dataTest,
+			"Número de caracteres:",
+			dataTest.length
+		);
 	}
 }
 
