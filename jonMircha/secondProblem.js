@@ -11,14 +11,14 @@ const arrayString = [
 	"Ayer si dormí",
 ];
 let indexRandom = Math.floor(Math.random() * arrayString.length);
-let arrayTest = arrayString[indexRandom];
+let arrayToWork = arrayString[indexRandom];
+let maxString = arrayToWork.length;
+let indexToCutRandom = Math.floor(Math.random() * maxString);
 
-function cutString(arrayTest) {
-	let maxString = arrayString[indexRandom].length;
-	let indexToCutRandom = Math.floor(Math.random() * maxString);
-	let srtCut = arrayTest.slice(0, indexToCutRandom);
+function cutString(inputString, indexToCut) {
+	let srtCut = inputString.slice(0, indexToCut);
 	console.log(
-		`Texto inicial: "${arrayTest}" que al cortarlo en el indice ${indexToCutRandom} daría este texto cortado: "${srtCut}"`
+		`Texto inicial "${inputString}" que al cortarlo en el indice ${indexToCut} daría el siguiente texto cortado: "${srtCut}"`
 	);
 }
-cutString(arrayTest);
+cutString(arrayToWork, indexToCutRandom);
