@@ -5,5 +5,4 @@
 function getRandomArbitrary(min, max) {
 	console.log(Math.floor(Math.random() * (max - min) + min));
 }
-
 getRandomArbitrary(501, 600);

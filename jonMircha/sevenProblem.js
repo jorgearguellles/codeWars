@@ -18,7 +18,7 @@ function deleteSpaces(characters) {
 }
 
 function arrayEquals(charsOrdered, charsReversed) {
-	for (var i = 0; i < charsOrdered.length; ++i) {
+	for (let i = 0; i < charsOrdered.length; ++i) {
 		if (charsOrdered[i] !== charsReversed[i])
 			return console.log(
 				`El texto "${str}" no es Palíndromo: ${charsReversed.join("")}`
