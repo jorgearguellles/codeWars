@@ -16,8 +16,9 @@ let str =
 
 function countWordTimes(str, word) {
 	let count = [];
+	let wordStr = str.split(" ");
+
 	for (let i = 0; i < str.length; i++) {
-		let wordStr = str.split(" ");
 		if (wordStr[i] === word) {
 			count.push(wordStr[i]);
 		}
