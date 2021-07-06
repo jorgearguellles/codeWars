@@ -19,4 +19,24 @@ cambia el programa para que funcione con cualquier tamaño, dando como salida un
 cuadrícula con el alto y ancho dados.
 */
 
-console.log("ene \n jsjsj" );
+let width = 7
+function ajedrezTable(width){
+  let odd = "#",
+  pair = "_",
+  jump = "\n";
+  let row = [];
+  for(let indexRow = 1; indexRow <= width ; indexRow++){
+    for(let indexItem = 1; indexItem <= width+1 ; indexItem++){
+      if(indexItem % (width+1) == 0){
+        row.push(jump);
+      } else if(indexItem % 2 == 0){
+        row.push(indexRow % 2 != 0 ? odd : pair);
+      } else{
+        row.push(indexRow % 2 == 0 ? odd : pair);
+      }
+    } 
+  }
+  console.log(row.join("").toString());
+}
+
+ajedrezTable(width);
