@@ -1,15 +1,13 @@
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 function alphabetPosition(text) {
-	const alphabet = "abcdefghijklmnopqrstuvwxyzáéíóúü";
-
-	let minus = text.toLowerCase();
-	let chars = minus.split("");
-
-	for (var index = 0; index < chars.length; index++) {
-		let position = alphabet.indexOf(chars[index]);
-
+	let char = text.toLowerCase().split("");
+	console.log(`El texto ingresado es: ${text}`);
+	for (var index = 0; index < char.length; index++) {
+		let position = alphabet.indexOf(char[index]);
 		if (position >= 0) {
 			console.log(
-				`Letra ${chars[index]} está en la posición Alphabetica :`,
+				`Letra ${char[index]} está en la posición Alphabetica:`,
 				position
 			);
 		}
@@ -17,4 +15,5 @@ function alphabetPosition(text) {
 	return text;
 }
 
-alphabetPosition("Jorge día");
+alphabetPosition("Ayer no comi");
+
