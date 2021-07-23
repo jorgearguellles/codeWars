@@ -13,21 +13,21 @@ animals = [
   },
   ];
 
+// console.log("Array:",animals);
+// console.log("Primer Animal:",animals[0]);
+// console.log("Tipo del primer Animal:",animals[0].type);
 
-//Lista compuesta por mamals
-//let mamals = [];
-
-//Verificación si el animal es Mamal, para agregarlos a la lista 
-function isMamal(animal){
-  if(animal[mammal] === true){
-    mamals = animal.push(animals[type])
-  }
-}
-
-//Funciñon que pregunta animal por animla verificado si es mamal, y si SI, los agrega a la lista
-function findMamals(lista){
+function findMamals(listaDeAnimales){
   let mamals = [];
-  lista.map(isMamal)
-  console.log(mamals)
+  listaDeAnimales.map(
+    function(animal){
+      if(animal.mammal === true){
+        return mamals.push(animal.type)
+      }
+    }
+  )
+  console.log(mamals);
+  return mamals;
 }
 
+findMamals(animals);
